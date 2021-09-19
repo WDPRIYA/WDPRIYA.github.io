@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title> Registration form</title>
+</head>
+
+<body>
+<script>
+
+function f1()
+
+{
+
+var t1=document.register.user.value;
+var t2=document.register.user.value;
+var t3=document.register.age.value;
+var t4=document.register.email.value;
+var t5=document.register.birthdate.value;
+var t6=document.register.collegename.value;
+var t7=document.register.phone.value;
+
+var test1=/^[A-Za-z0-9._]*\@gmail*\.[A-Za-z]{2,5}$/;
+var test2=/^[18-50]
+
+if(t1=="")
+
+{
+
+alert("Enter First name!");
+
+document.register.user.focus();
+
+return false;
+
+}
+
+if(!isNaN(t1))
+
+{
+
+alert("Numbers aren't allowed!");
+
+document.register.user.focus();
+
+return false;
+
+}
+
+if(t2=="")
+
+{
+
+alert("Enter Last Name!");
+
+document.register.user.focus();
+
+return false;
+
+}
+
+if(!isNaN(t2))
+
+{
+
+alert("Numbers aren't allowed!");
+
+document.register.user.focus();
+
+return false;
+
+}
+
+if(t3=="")
+
+{
+
+alert("Enter Your Age!");
+
+document.register.age.focus();
+
+return false;
+
+}
+
+if(!test2.test(t3))
+
+{
+
+alert("Invalid Age!");
+
+document.register.age.focus();
+
+return false;
+
+}
+
+if(t4=="")
+
+{
+
+alert("Enter Email Address!");
+
+document.register.email.focus();
+
+return false;
+
+}
+
+if(!test1.test(t4))
+
+{
+
+alert("Invalid Email!");
+
+document.register.email.focus();
+
+return false;
+
+}
+
+if(t5=="")
+
+{
+
+alert("Enter your Date Of Birth :");
+
+document.register.birthdate.focus();
+
+return false;
+
+}
+
+if(!age.match(t4))
+
+{
+
+alert("Enter appropriate DOB! ");
+
+document.register.birthdate.focus();
+
+return false;
+
+}
+
+if(t6=="")
+
+{
+
+alert("Enter College name!");
+
+document.register.collegename.focus();
+
+return false;
+
+}
+
+if(!isNaN(t6))
+
+{
+
+alert("Numbers aren't allowed!");
+
+document.register.collegename.focus();
+
+return false;
+
+}
+
+if(t7=="")
+
+{
+
+alert("Enter Mobile Number!");
+
+document.register.phone.focus();
+
+return false;
+
+}
+
+if(isNaN(t7))
+
+{
+
+alert("Alphabets aren't allowed in phone number!");
+
+document.register.phone.focus();
+
+return false;
+
+}
+
+}    
+
+</script>
+
+<center ><h1> STUDENT REGISTRATION FORM</h1> </center>
+
+<form name="registration"  method="POST" action="wd4.php" >
+<ol>
+<b>
+<li><label for ="firstname"> FIRST NAME :</label>
+<input type="text" name="firstname" /></li><br>
+
+<li><label for = "lastname"> LAST NAME :</label>
+<input type="text" name="lastname" /></li><br>
+<li><label for ="yourage "> YOUR AGE :</label>
+<input type="number" name="yourage" /></li><br>
+
+<li><label for ="emailid "> EMAIL ID :</label>
+<input type="email" name="emailid" /></li><br>
+
+<li><label for ="dob "> DATE OF BIRTH :</label>
+<input type="dob" name="dob" /></li><br>
+
+<li><label for ="gender"> GENDER :</label><br>
+
+<input type="radio" id="male" name="gender" value="male">Male </br>
+<input type="radio" id="female" name="gender" value="female">Female
+</br>
+<input type="radio" id="other" name="gender" value="other">Other
+</br></br>
+</li>
+
+<li>
+SELECT DEPARTMENT:<select id="department" name="department">
+<option name="BTECH (IT) ">BTECH (IT)</option>
+<option name="BTECH (CE)">BTECH (CE)</option>
+<option name="BTECH (EC)"> BTECH (EC)</option>
+</select></br></br>
+</li>
+
+<li><label for ="collegename"> COLLEGE NAME :</label>
+<input type="text" name="collegename " /></li><br>
+
+<li><label for ="MobileNumber"> MOBILE NUMBER :</label>
+<input type="number" name="mobno " /></li><br>
+<li>
+ADDRESS:<br><textarea id="Address" rows="5" cols="20" name="address"> </textarea>
+</li>
+
+</b>
+</ol>
+<button type="submit"> REGISTRATION </button>
+
+
+
+
+</form>
+</body>
+</html>
